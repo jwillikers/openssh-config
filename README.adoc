@@ -11,7 +11,7 @@ ifdef::env-github[]
 endif::[]
 :openssh: https://www.openssh.com/[OpenSSH]
 
-My configuration for {OpenSSH} servers and clients.
+System configuration for {OpenSSH} servers and clients.
 
 == Usage
 
@@ -34,14 +34,14 @@ git -C ~/Projects clone git@github.com:jwillikers/openssh-config.git
 +
 [,sh]
 ----
-sudo cp ~/Projects/openssh-config/ssh/sshd_conf.d/*.conf /etc/ssh/sshd_conf.d/
+sudo cp ~/Projects/openssh-config/ssh/sshd_config.d/*.conf /etc/ssh/sshd_config.d/
 ----
 
 . Copy the OpenSSH client configuration files to the system configuration directory.
 +
 [,sh]
 ----
-sudo cp ~/Projects/openssh-config/ssh/ssh_conf.d/*.conf /etc/ssh/ssh_conf.d/
+sudo cp ~/Projects/openssh-config/ssh/ssh_config.d/*.conf /etc/ssh/ssh_config.d/
 ----
 
 === Update
@@ -59,14 +59,14 @@ git -C ~/Projects clone git@github.com:jwillikers/openssh-config.git
 +
 [,sh]
 ----
-sudo cp /etc/ssh/sshd_conf.d/*.conf ~/Projects/openssh-config/ssh/sshd_conf.d/
+sudo cp /etc/ssh/sshd_config.d/*.conf ~/Projects/openssh-config/ssh/sshd_config.d/
 ----
 
 . Copy the OpenSSH client configuration files from the system directory to the repository.
 +
 [,sh]
 ----
-sudo cp /etc/ssh/ssh_conf.d/*.conf ~/Projects/openssh-config/ssh/ssh_conf.d/
+sudo cp /etc/ssh/ssh_config.d/*.conf ~/Projects/openssh-config/ssh/ssh_config.d/
 ----
 
 . Stage the updated file.

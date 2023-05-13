@@ -1,0 +1,108 @@
+= OpenSSH Config
+Jordan Williams <jordan@jwillikers.com>
+:experimental:
+:icons: font
+ifdef::env-github[]
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+endif::[]
+:openssh: https://www.openssh.com/[OpenSSH]
+
+My configuration for {OpenSSH} servers and clients.
+
+== Usage
+
+This repository contains the configuration files for {OpenSSH}.
+This file is synchronized using this Git repository.
+The following instructions detail how to use and sync this repository.
+
+=== Install
+
+Install these settings with the following instructions.
+
+. Clone this repository.
++
+[,sh]
+----
+git -C ~/Projects clone git@github.com:jwillikers/openssh-config.git
+----
+
+. Copy the OpenSSH server configuration files to the system configuration directory.
++
+[,sh]
+----
+sudo cp ~/Projects/openssh-config/ssh/sshd_conf.d/*.conf /etc/ssh/sshd_conf.d/
+----
+
+. Copy the OpenSSH client configuration files to the system configuration directory.
++
+[,sh]
+----
+sudo cp ~/Projects/openssh-config/ssh/ssh_conf.d/*.conf /etc/ssh/ssh_conf.d/
+----
+
+=== Update
+
+To update the settings in this repository from an existing installation, follow these steps.
+
+. If you haven't already done so, clone this repository.
++
+[,sh]
+----
+git -C ~/Projects clone git@github.com:jwillikers/openssh-config.git
+----
+
+. Copy the OpenSSH server configuration files from the system directory to the repository.
++
+[,sh]
+----
+sudo cp /etc/ssh/sshd_conf.d/*.conf ~/Projects/openssh-config/ssh/sshd_conf.d/
+----
+
+. Copy the OpenSSH client configuration files from the system directory to the repository.
++
+[,sh]
+----
+sudo cp /etc/ssh/ssh_conf.d/*.conf ~/Projects/openssh-config/ssh/ssh_conf.d/
+----
+
+. Stage the updated file.
++
+[,sh]
+----
+git -C ~/Projects/openssh-config add -A
+----
+
+. Commit.
++
+[,sh]
+----
+git -C ~/Projects/openssh-config commit -m "Update configuration putting all others to shame"
+----
+
+. Push the changes back to the central repository.
++
+[,sh]
+----
+git -C ~/Projects/openssh-config push
+----
+
+== Code of Conduct
+
+Please refer to the project's link:CODE_OF_CONDUCT.adoc[Code of Conduct].
+
+== License
+
+This repository is licensed under the https://www.gnu.org/licenses/gpl-3.0.html[GPLv3].
+Please refer to the bundled link:LICENSE.adoc[license].
+
+== Copyright
+
+© 2023 Jordan Williams
+
+== Authors
+
+mailto:{email}[{author}]

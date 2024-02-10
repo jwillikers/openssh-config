@@ -27,21 +27,21 @@ Install these settings with the following instructions.
 +
 [,sh]
 ----
-git -C ~/Projects clone git@github.com:jwillikers/openssh-config.git
+git -C clone https://github.com/jwillikers/openssh-config.git
 ----
 
 . Copy the OpenSSH server configuration files to the system configuration directory.
 +
 [,sh]
 ----
-sudo cp ~/Projects/openssh-config/ssh/sshd_config.d/*.conf /etc/ssh/sshd_config.d/
+sudo cp openssh-config/ssh/sshd_config.d/*.conf /etc/ssh/sshd_config.d/
 ----
 
 . Copy the OpenSSH client configuration files to the system configuration directory.
 +
 [,sh]
 ----
-sudo cp ~/Projects/openssh-config/ssh/ssh_config.d/*.conf /etc/ssh/ssh_config.d/
+sudo cp openssh-config/ssh/ssh_config.d/*.conf /etc/ssh/ssh_config.d/
 ----
 
 . Restart the SSH server.
@@ -59,42 +59,42 @@ To update the settings in this repository from an existing installation, follow 
 +
 [,sh]
 ----
-git -C ~/Projects clone git@github.com:jwillikers/openssh-config.git
+git clone git@github.com:jwillikers/openssh-config.git
 ----
 
 . Copy the OpenSSH server configuration files from the system directory to the repository.
 +
 [,sh]
 ----
-sudo cp /etc/ssh/sshd_config.d/*.conf ~/Projects/openssh-config/ssh/sshd_config.d/
+sudo cp /etc/ssh/sshd_config.d/*.conf openssh-config/ssh/sshd_config.d/
 ----
 
 . Copy the OpenSSH client configuration files from the system directory to the repository.
 +
 [,sh]
 ----
-sudo cp /etc/ssh/ssh_config.d/*.conf ~/Projects/openssh-config/ssh/ssh_config.d/
+sudo cp /etc/ssh/ssh_config.d/*.conf openssh-config/ssh/ssh_config.d/
 ----
 
 . Stage the updated file.
 +
 [,sh]
 ----
-git -C ~/Projects/openssh-config add -A
+git -C openssh-config add -A
 ----
 
 . Commit.
 +
 [,sh]
 ----
-git -C ~/Projects/openssh-config commit -m "Update configuration putting all others to shame"
+git -C openssh-config commit -m "Update configuration putting all others to shame"
 ----
 
 . Push the changes back to the central repository.
 +
 [,sh]
 ----
-git -C ~/Projects/openssh-config push
+git -C openssh-config push
 ----
 
 == Code of Conduct
@@ -108,7 +108,7 @@ Please refer to the bundled link:LICENSE.adoc[license].
 
 == Copyright
 
-© 2023 Jordan Williams
+© 2023-2024 Jordan Williams
 
 == Authors
 

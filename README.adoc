@@ -27,7 +27,7 @@ Install these settings with the following instructions.
 +
 [,sh]
 ----
-git -C clone https://github.com/jwillikers/openssh-config.git
+git clone https://github.com/jwillikers/openssh-config.git
 ----
 
 . Copy the OpenSSH server configuration files to the system configuration directory.

@@ -9,6 +9,7 @@ ifdef::env-github[]
 :caution-caption: :fire:
 :warning-caption: :warning:
 endif::[]
+:just: https://github.com/casey/just[just]
 :openssh: https://www.openssh.com/[OpenSSH]
 
 System configuration for {OpenSSH} servers and clients.

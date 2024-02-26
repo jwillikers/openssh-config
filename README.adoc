@@ -23,6 +23,8 @@ The following instructions detail how to use and sync this repository.
 
 Install these settings with the following instructions.
 
+. Install {just} by following the instructions in the https://github.com/casey/just?tab=readme-ov-file#installation[installation section].
+
 . Clone this repository.
 +
 [,sh]
@@ -30,71 +32,11 @@ Install these settings with the following instructions.
 git clone https://github.com/jwillikers/openssh-config.git
 ----
 
-. Copy the OpenSSH server configuration files to the system configuration directory.
+. Run `just install` to install the configuration.
 +
 [,sh]
 ----
-sudo cp openssh-config/ssh/sshd_config.d/*.conf /etc/ssh/sshd_config.d/
-----
-
-. Copy the OpenSSH client configuration files to the system configuration directory.
-+
-[,sh]
-----
-sudo cp openssh-config/ssh/ssh_config.d/*.conf /etc/ssh/ssh_config.d/
-----
-
-. Restart the SSH server.
-+
-[,sh]
-----
-sudo systemctl restart sshd
-----
-
-=== Update
-
-To update the settings in this repository from an existing installation, follow these steps.
-
-. If you haven't already done so, clone this repository.
-+
-[,sh]
-----
-git clone git@github.com:jwillikers/openssh-config.git
-----
-
-. Copy the OpenSSH server configuration files from the system directory to the repository.
-+
-[,sh]
-----
-sudo cp /etc/ssh/sshd_config.d/*.conf openssh-config/ssh/sshd_config.d/
-----
-
-. Copy the OpenSSH client configuration files from the system directory to the repository.
-+
-[,sh]
-----
-sudo cp /etc/ssh/ssh_config.d/*.conf openssh-config/ssh/ssh_config.d/
-----
-
-. Stage the updated file.
-+
-[,sh]
-----
-git -C openssh-config add -A
-----
-
-. Commit.
-+
-[,sh]
-----
-git -C openssh-config commit -m "Update configuration putting all others to shame"
-----
-
-. Push the changes back to the central repository.
-+
-[,sh]
-----
-git -C openssh-config push
+just install
 ----
 
 == Code of Conduct

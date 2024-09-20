@@ -33,11 +33,18 @@ Install these settings with the following instructions.
 git clone https://github.com/jwillikers/openssh-config.git
 ----
 
-. Run `just install` to install the configuration.
+. Change to the repository directory.
 +
 [,sh]
 ----
-just install
+cd openssh-config
+----
+
+. Run `just` to install the configuration.
++
+[,sh]
+----
+just
 ----
 
 == Code of Conduct
